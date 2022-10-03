@@ -6,11 +6,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-
 ### DEFINE FUNCTIONS ###
 #Define exponential-e function
 def f(x):
-        return np.e**(-x**2)
+    return np.e**(-x**2)
 
 #Define a function that numerically integrates using Simpson's rule
 def SimpsonIntegral(f, a, b):
@@ -31,7 +30,6 @@ def SimpsonIntegral(f, a, b):
     return y
 
 
-
 ### MAIN ###
 #Initialiaze constants and arrays
 a = 0
@@ -48,6 +46,8 @@ for i in x:
 #Plot E(x) vs. x figure
 plt.figure(figsize=(8,5))
 plt.title("E(x) vs. x")
+plt.xlabel("x")
+plt.ylabel("y")
 plt.plot(x,Ex)
 plt.xlim(x[0],x[-1])
 plt.show()
