@@ -6,20 +6,20 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from IPython.display import HTML
-import random as r
 
 ### MAIN ###
 
 #Se constant values and initialize array to track brownian motion
-T = int(1e3)
+T = int(1e5)
 L = 101
 i = 50
 j = 50
 motionArray = np.array([[i, j]])
+rng = np.random.default_rng()
 
 #For loop to compute random stepping of Brownian motion particle
 for t in np.arange(T):
-    step = r.randint(1,4)
+    step = rng.integers(1,4)
     if step==1: #Move particle one step up
         if i==L: 
             continue
@@ -62,7 +62,7 @@ def animate(n):
     return particle, line,
 
 #Execute animation by creating GIF
-anim = animation.FuncAnimation(fig, animate, frames = T)
+anim = animation.FuncAnimation(fig, animate, blit = True)
 writergif = animation.PillowWriter(fps=30)
 HTML(anim.to_html5_video())
 plt.show()
