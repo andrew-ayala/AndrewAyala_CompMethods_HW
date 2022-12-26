@@ -45,13 +45,9 @@ def idct(a):
 #7.4
 #a)
 #Download Dow data and create figure plot
-<<<<<<< HEAD
 file = args.dowData
 dowData = np.loadtxt(file[0], dtype=float)
 # print(dowData)
-=======
-dowData = np.loadtxt(args.dowData)
->>>>>>> abc994c2ed5dacf831cc2a4e6bbb65d6923ee305
 figure1 = plt.figure()
 plt.plot(dowData)
 plt.xlabel("Day")
@@ -78,33 +74,21 @@ plt.plot(data2)
 
 #Repeat inverse transform, setting last 98% of coefficients to zero
 #e)
-<<<<<<< HEAD
 perInput = args.per
 fraction = 1 - perInput[0]/100
-=======
-fraction = 1 - args.per/100
->>>>>>> abc994c2ed5dacf831cc2a4e6bbb65d6923ee305
 dowCoeff[int(N*fraction):] = 0.0
 data3 = np.fft.irfft(dowCoeff)
 plt.plot(data3)
 plt.show()
-<<<<<<< HEAD
 #Reducing the last 90% of coefficients to zero restricts the FFTvto the most dominant periodic frequency signals in our input function.
-=======
-#Reducing the last 90%\ of coefficients to zero restricts the FFTvto the most dominant periodic frequency signals in our input function.
->>>>>>> abc994c2ed5dacf831cc2a4e6bbb65d6923ee305
 #Thus, removing all the jitter in our original function and returning a smoothed out signal
 
 
 #7.6
 #a)
 #Download Dow2 data and create figure plot
-<<<<<<< HEAD
 file2 = args.dow2Data
 dow2Data = np.loadtxt(file2[0], dtype=float)
-=======
-dow2Data = np.loadtxt(args.dow2Data, float)
->>>>>>> abc994c2ed5dacf831cc2a4e6bbb65d6923ee305
 figure2 = plt.figure()
 plt.plot(dow2Data)
 plt.xlabel("Day")
@@ -115,11 +99,7 @@ figure2.show()
 #Calculate transform coefficients and set last 90% of coefficients to zero
 dow2Coeff = np.fft.rfft(dow2Data)
 N = len(dow2Coeff)
-<<<<<<< HEAD
 dow2Coeff[N//10:] = 0.0
-=======
-dow2Coeff[N//50:] = 0.0
->>>>>>> abc994c2ed5dacf831cc2a4e6bbb65d6923ee305
 
 #Recreate function using inverse transform
 newDow2Data = np.fft.irfft(dow2Coeff)
@@ -129,11 +109,7 @@ plt.show()
 #b)
 #Create transform coefficients for cosine transform. Use inverse cosine transform to retrieve original function
 dow2Coeff = dct(dow2Data)
-<<<<<<< HEAD
 fraction = 1 - perInput[0]/100
-=======
-fraction = 1 - args.per/100
->>>>>>> abc994c2ed5dacf831cc2a4e6bbb65d6923ee305
 dow2Coeff[int(N*fraction):] = 0.0
 newDow2Data = idct(dow2Coeff)
 plt.plot(newDow2Data)

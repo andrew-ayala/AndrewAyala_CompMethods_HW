@@ -6,35 +6,22 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from IPython.display import HTML
-<<<<<<< HEAD
-=======
-import random as r
->>>>>>> abc994c2ed5dacf831cc2a4e6bbb65d6923ee305
 
 ### MAIN ###
 
 #Se constant values and initialize array to track brownian motion
-<<<<<<< HEAD
+
 T = int(1e5)
-=======
-T = int(1e3)
->>>>>>> abc994c2ed5dacf831cc2a4e6bbb65d6923ee305
 L = 101
 i = 50
 j = 50
 motionArray = np.array([[i, j]])
-<<<<<<< HEAD
 rng = np.random.default_rng()
 
 #For loop to compute random stepping of Brownian motion particle
 for t in np.arange(T):
     step = rng.integers(1,4)
-=======
-
 #For loop to compute random stepping of Brownian motion particle
-for t in np.arange(T):
-    step = r.randint(1,4)
->>>>>>> abc994c2ed5dacf831cc2a4e6bbb65d6923ee305
     if step==1: #Move particle one step up
         if i==L: 
             continue
@@ -46,7 +33,7 @@ for t in np.arange(T):
         else: 
             i-=1
     elif step==3: #Move particle one step right
-        if j==L: 
+        if j==L:
             continue
         else:
             j+=1
@@ -77,15 +64,10 @@ def animate(n):
     return particle, line,
 
 #Execute animation by creating GIF
-<<<<<<< HEAD
 anim = animation.FuncAnimation(fig, animate, blit = True)
-=======
-anim = animation.FuncAnimation(fig, animate, frames = T)
->>>>>>> abc994c2ed5dacf831cc2a4e6bbb65d6923ee305
 writergif = animation.PillowWriter(fps=30)
 HTML(anim.to_html5_video())
 plt.show()
 
 #Option to save animation as GIF
 #anim.save('filename.gif',writer=writergif)
-
