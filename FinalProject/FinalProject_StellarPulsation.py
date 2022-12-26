@@ -238,8 +238,8 @@ plt.show()
 #Make gif of reconstructed NEW pulsation for visualization purposes
 newFig = plt.figure(figsize=(5,5))
 axNew = newFig.add_subplot(1,1,1)
-axNew = plt.title("Reconstructed Pulsation", fontsize=20)
 axNew.axis('off')
+plt.title("Reconstructed Pulsation", fontsize=20)
 imArrayNew = []
 
 for i in newMapArray:
