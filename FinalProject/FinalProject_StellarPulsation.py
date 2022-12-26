@@ -256,9 +256,9 @@ plt.show()
 ### CONCLUSION ###
 """
 The goals of this project proved to be far more lofty than anticipated.  ALthough my code seems to have the ability to reconstruct the observed
-periodic variability for lower frequency pulsations, the higher frequencies and higher m-mode attreibutions seem to be hard to reconcile.  The
-result is an overall priodic variabilty in the flux v time domain that quite closely matches our signal over a long baseline and low frequency
-variability.  However, the higher frequency pulsations have trouble being recaptured as well as the proper higher l and m-mode spherical harmonics.
-This can be witnessed in the gif visualizations of the pulsations as the form and variabilty of the color map of our reconstructed source
+periodic variability for lower frequency pulsations, the higher frequencies and higher m-mode attributions seem to be hard to reconcile.  The
+result is an overall periodic variabilty in the flux v. time domain that quite closely matches our signal over a long baseline and low frequency
+variability.  However, the higher frequency pulsations (or jitter) have trouble being recaptured as well as the proper higher l and m-mode spherical harmonics.
+This can be witnessed in the gif visualizations of the pulsations, as the form and variabilty of the color map of our reconstructed source
 does not quite match the pattern with which the input random pulsation is observed.
 """
