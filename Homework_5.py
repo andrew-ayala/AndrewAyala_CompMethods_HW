@@ -112,5 +112,9 @@ dow2Coeff = dct(dow2Data)
 fraction = 1 - perInput[0]/100
 dow2Coeff[int(N*fraction):] = 0.0
 newDow2Data = idct(dow2Coeff)
+plt.xlabel("Day")
+plt.ylabel("Dow Closing Value")
+plt.title("Dow 2004-2008")
+plt.plot(dow2Data)
 plt.plot(newDow2Data)
 plt.show()
