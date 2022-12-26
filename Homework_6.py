@@ -11,7 +11,7 @@ from IPython.display import HTML
 
 #Se constant values and initialize array to track brownian motion
 
-T = int(1e6)
+T = int(1e5)
 L = 101
 i = 50
 j = 50
