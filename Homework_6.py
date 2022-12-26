@@ -11,7 +11,7 @@ from IPython.display import HTML
 
 #Se constant values and initialize array to track brownian motion
 
-T = int(1e5)
+T = int(1e6)
 L = 101
 i = 50
 j = 50
@@ -20,24 +20,24 @@ rng = np.random.default_rng()
 
 #For loop to compute random stepping of Brownian motion particle
 for t in np.arange(T):
-    step = rng.integers(1,4)
+    step = rng.integers(1,5)
 #For loop to compute random stepping of Brownian motion particle
-    if step==1: #Move particle one step up
+    if step==1: #Move particle one step right
         if i==L: 
             continue
         else:
             i+=1
-    elif step==2: #Move particle one step down
+    elif step==2: #Move particle one step left
         if i==0: 
             continue
         else: 
             i-=1
-    elif step==3: #Move particle one step right
+    elif step==3: #Move particle one step up
         if j==L:
             continue
         else:
             j+=1
-    elif step==4: #Move particle one step left
+    elif step==4: #Move particle one step down
         if j==0: 
             continue
         else:
@@ -64,7 +64,7 @@ def animate(n):
     return particle, line,
 
 #Execute animation by creating GIF
-anim = animation.FuncAnimation(fig, animate, blit = True)
+anim = animation.FuncAnimation(fig, animate, interval = 100, blit = True)
 writergif = animation.PillowWriter(fps=30)
 HTML(anim.to_html5_video())
 plt.show()
