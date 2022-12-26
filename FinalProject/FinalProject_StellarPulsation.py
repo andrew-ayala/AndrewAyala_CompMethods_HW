@@ -7,7 +7,7 @@ star due to either pressure or gravitational gradients, known as p-mode and g-mo
 spherical harmonics.  Using the "Starry" python package one can model differential magnitudes of a spherical surface, however, there 
 are no methods within this package enabling these surfaces to evolve or vary over time-- or in another word; pulsate. My program attempts 
 to exploit this static nature of the "Starry" package to create random simulated data of a periodic pulsating stellar source, then proceeds to 
-simulate observation of this source by calculting integrated surface flux at discrete timesteps over a given baseline, 
+simulate observation of this source by calculating integrated surface flux at discrete timesteps over a given baseline, 
 and finally attempts to recreate the observed pulsation by taking the Fourier transform of the data and reinserting the dominant observed 
 frequencies into spherical harmonic maps.  The result should be a source of variabilty that resembles our original randomly constructed star.
 (For the simplicity of this project which can become extremely complicated very easily, I have limited the scope of this code to 
